@@ -1,7 +1,6 @@
 import { useGetTasksQuery } from "@/src/api";
-import { Header, Loading } from "@/src/components";
+import { Header, Loading, TaskCard } from "@/src/components";
 import React from "react";
-import { TaskCard } from "./components";
 
 type Props = {
   id: string;

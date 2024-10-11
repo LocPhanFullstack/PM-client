@@ -1,6 +1,7 @@
 import { ITask } from "@/src/shared/types";
 import Image from "next/image";
 import { TaskContent } from "./components";
+import { Card } from "../DataDisplay";
 
 type Props = {
   task: ITask;
@@ -8,7 +9,7 @@ type Props = {
 
 export const TaskCard = ({ task }: Props) => {
   return (
-    <div className="rounded p-4 bg-background shadow">
+    <Card>
       {task && task.attachments && task.attachments.length > 0 && (
         <div>
           <strong>Attachments: </strong>
@@ -24,6 +25,6 @@ export const TaskCard = ({ task }: Props) => {
         </div>
       )}
       <TaskContent task={task} />
-    </div>
+    </Card>
   );
 };

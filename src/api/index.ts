@@ -1,5 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { IProject, ITask, IUser } from "../shared/types";
+import {
+  IProject,
+  ISearchResponse,
+  ITask,
+  ITeam,
+  IUser,
+} from "../shared/types";
 
 export const api = createApi({
   baseQuery: fetchBaseQuery({
@@ -59,13 +65,13 @@ export const api = createApi({
       query: () => "users",
       providesTags: ["Users"],
     }),
-    // getTeams: build.query<Team[], void>({
-    //   query: () => "teams",
-    //   providesTags: ["Teams"],
-    // }),
-    // search: build.query<SearchResults, string>({
-    //   query: (query) => `search?query=${query}`,
-    // }),
+    getTeams: build.query<ITeam[], void>({
+      query: () => "teams",
+      providesTags: ["Teams"],
+    }),
+    search: build.query<ISearchResponse, string>({
+      query: (query) => `search?query=${query}`,
+    }),
   }),
 });
 
@@ -77,6 +83,6 @@ export const {
   useUpdateTaskStatusMutation,
   useGetUsersQuery,
   useGetTasksByUserQuery,
-  // useSearchQuery,
-  // useGetTeamsQuery,
+  useSearchQuery,
+  useGetTeamsQuery,
 } = api;

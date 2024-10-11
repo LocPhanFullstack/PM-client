@@ -2,12 +2,12 @@
 
 import { MainLayout } from "@/src/components";
 import { Breadcrumb } from "@/src/components/DataDisplay/Breadcrumbs/types";
-import { TimelineScreen } from "@/src/screens";
+import { SearchScreen } from "@/src/screens";
 
 const Project = () => {
   return (
-    <MainLayout breadcrumbs={[Breadcrumb.Timeline]}>
-      <TimelineScreen />
+    <MainLayout breadcrumbs={[Breadcrumb.Search]}>
+      <SearchScreen />
     </MainLayout>
   );
 };

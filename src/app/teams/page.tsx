@@ -2,14 +2,14 @@
 
 import { MainLayout } from "@/src/components";
 import { Breadcrumb } from "@/src/components/DataDisplay/Breadcrumbs/types";
-import { TimelineScreen } from "@/src/screens";
+import { TeamsScreen } from "@/src/screens/Teams";
 
-const Project = () => {
+const Teams = () => {
   return (
-    <MainLayout breadcrumbs={[Breadcrumb.Timeline]}>
-      <TimelineScreen />
+    <MainLayout breadcrumbs={[Breadcrumb.Teams]}>
+      <TeamsScreen />
     </MainLayout>
   );
 };
 
-export default Project;
+export default Teams;

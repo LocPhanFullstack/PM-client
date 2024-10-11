@@ -54,7 +54,6 @@ export const sideBarGroups: SideBarGroup[] = [
           </div>
         ),
         location: "/search",
-        isActive: false,
       },
       {
         title: "Settings",
@@ -64,7 +63,6 @@ export const sideBarGroups: SideBarGroup[] = [
           </div>
         ),
         location: "/settings",
-        isActive: false,
       },
       {
         title: "Users",
@@ -74,7 +72,6 @@ export const sideBarGroups: SideBarGroup[] = [
           </div>
         ),
         location: "/users",
-        isActive: false,
       },
       {
         title: "Teams",
@@ -84,7 +81,6 @@ export const sideBarGroups: SideBarGroup[] = [
           </div>
         ),
         location: "/teams",
-        isActive: false,
       },
     ],
   },

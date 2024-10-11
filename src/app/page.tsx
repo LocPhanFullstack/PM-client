@@ -2,7 +2,7 @@
 
 import { MainLayout } from "../components";
 import { Breadcrumb } from "../components/DataDisplay/Breadcrumbs/types";
-import { HomeScreen } from "../screens/Home";
+import { HomeScreen } from "../screens";
 const Home = () => {
   return (
     <MainLayout breadcrumbs={[Breadcrumb.Home]}>

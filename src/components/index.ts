@@ -4,3 +4,6 @@ export * from "./TabButton";
 export * from "./MainLayout";
 export * from "./Header";
 export * from "./Modal";
+export * from "./ProjectCard";
+export * from "./UserCard";
+export * from "./TaskCard";

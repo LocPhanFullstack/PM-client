@@ -8,6 +8,13 @@ export interface IProject {
   endDate?: string;
 }
 
+export interface ITeam {
+  teamId: number;
+  teamName: string;
+  productOwnerUserId?: number;
+  projectManagerUserId?: number;
+}
+
 export interface IUser {
   userId?: number;
   username: string;
@@ -43,6 +50,12 @@ export interface ITask {
   assignee?: IUser;
   comments?: Comment[];
   attachments?: IAttachment[];
+}
+
+export interface ISearchResponse {
+  tasks?: ITask[];
+  projects?: IProject[];
+  users?: IUser[];
 }
 
 export interface IApiError {

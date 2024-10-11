@@ -1,7 +1,7 @@
 "use client";
 
 import { useGetProjectsQuery } from "@/src/api";
-import { Header } from "@/src/components";
+import { Header, Loading } from "@/src/components";
 import { DisplayOption, Gantt, ViewMode } from "gantt-task-react";
 import "gantt-task-react/dist/index.css";
 import { useTheme } from "next-themes";
@@ -41,13 +41,19 @@ export const TimelineScreen = () => {
     }));
   };
 
-  if (isLoading) return <div>Loading...</div>;
   if (isError || !projects)
     return <div>An error occurred while fetching projects</div>;
 
   return (
     <div className="max-w-full">
       <header className="mb-4 flex items-center justify-between">
+        {isLoading && (
+          <Loading
+            loadingStyle="clip-loader"
+            cssOverride={{ marginTop: "20px" }}
+            size={60}
+          />
+        )}
         <Header name="Projects Timeline" />
         <div className="relative inline-block w-64">
           <select
@@ -62,7 +68,7 @@ export const TimelineScreen = () => {
         </div>
       </header>
 
-      <div className="overflow-hidden rounded-md shadow dark:bg-dark-secondary dark:text-white">
+      <div className="overflow-hidden rounded-md shadow">
         <div className="timeline">
           <Gantt
             tasks={ganttTasks}
